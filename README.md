@@ -1,4 +1,5 @@
 # AngularPractice
+Angular公式のTour of Heroesを進めているだけのものです。あとは、色々試したいものを試すためのもの
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
