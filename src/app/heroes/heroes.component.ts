@@ -27,13 +27,6 @@ export class HeroesComponent implements OnInit {
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
-    if (!this.isSameMessage(`HeroesComponent: Selected hero id=${hero.id}`)) {
-      this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
-    }
+    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
   }
-
-  private isSameMessage(message: string): boolean {
-    return this.messageService.messages.some((msg) => msg === message);
-  }
-
 }
