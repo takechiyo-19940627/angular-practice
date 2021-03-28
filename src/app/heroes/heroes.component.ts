@@ -32,7 +32,7 @@ export class HeroesComponent implements OnInit {
     }
   }
 
-  isSameMessage(message: string): boolean {
+  private isSameMessage(message: string): boolean {
     return this.messageService.messages.some((msg) => msg === message);
   }
 
