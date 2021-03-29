@@ -20,18 +20,6 @@
   background-color: #e6e6e6;
   left: .1em;
 }
-.heroes li.selected {
-  background-color: black;
-  color: white;
-}
-.heroes li.selected:hover {
-  background-color: #505050;
-  color: white;
-}
-.heroes li.selected:active {
-  background-color: black;
-  color: white;
-}
 .heroes .badge {
   display: inline-block;
   font-size: small;
