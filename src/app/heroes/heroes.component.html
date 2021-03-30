@@ -6,3 +6,9 @@
     </a>
   </li>
 </ul>
+<div>
+  <label id="new-hero">Hero name:</label>
+  <input for="new-hero" #heroName>
+
+  <button class="add-button" (click)="add(heroName.value);heroName.value=''">save</button>
+</div>
