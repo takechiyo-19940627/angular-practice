@@ -13,6 +13,7 @@ import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
       { dataEncapsulation: false }
     ),
     AppRoutingModule,
+    CrisisCenterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
