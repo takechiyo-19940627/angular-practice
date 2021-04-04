@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { CrisisCenterHomeComponent } from './crisis-center-home/crisis-center-home.component';
 import { CrisisCenterComponent } from './crisis-center/crisis-center.component';
@@ -13,17 +13,15 @@ const crisisCenterRoutes: Routes = [
       {
         path: '',
         component: CrisisListComponent,
-        children: [
-          {
-            path: ':id',
-            component: CrisisDetailComponent,
-          },
-          {
-            path: '',
-            component: CrisisCenterHomeComponent,
-          }
-        ],
-      }
+      },
+      {
+        path: ':id',
+        component: CrisisDetailComponent,
+      },
+      {
+        path: '',
+        component: CrisisCenterHomeComponent,
+      },
     ],
   }
 ];
