@@ -5,6 +5,7 @@ import { CrisisCenterRoutingModule } from './crisis-center-routing.module';
 import { CrisisCenterComponent } from './crisis-center/crisis-center.component';
 import { CrisisCenterHomeComponent } from './crisis-center-home/crisis-center-home.component';
 import { CrisisDetailComponent } from './crisis-detail/crisis-detail.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { CrisisDetailComponent } from './crisis-detail/crisis-detail.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     CrisisCenterRoutingModule,
   ]
 })
