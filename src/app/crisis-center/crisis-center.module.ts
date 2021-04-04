@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CrisisCenterRoutingModule } from './crisis-center-routing.module';
+import { CrisisCenterComponent } from './crisis-center/crisis-center.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [CrisisCenterComponent],
   imports: [
     CommonModule,
     CrisisCenterRoutingModule
