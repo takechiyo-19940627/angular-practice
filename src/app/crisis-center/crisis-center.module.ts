@@ -8,10 +8,14 @@ import { CrisisDetailComponent } from './crisis-detail/crisis-detail.component';
 
 
 @NgModule({
-  declarations: [CrisisCenterComponent, CrisisCenterHomeComponent, CrisisDetailComponent],
+  declarations: [
+    CrisisCenterComponent,
+    CrisisCenterHomeComponent,
+    CrisisDetailComponent,
+  ],
   imports: [
     CommonModule,
-    CrisisCenterRoutingModule
+    CrisisCenterRoutingModule,
   ]
 })
 export class CrisisCenterModule { }
