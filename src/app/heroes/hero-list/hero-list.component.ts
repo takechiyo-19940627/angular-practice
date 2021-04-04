@@ -9,7 +9,6 @@ import { HeroService } from 'src/app/shared/services/hero.service';
 })
 export class HeroListComponent implements OnInit {
   heroes: Hero[] = [];
-  selectedHero?: Hero;
 
   constructor(
     private heroService: HeroService,
