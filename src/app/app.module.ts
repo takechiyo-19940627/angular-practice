@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HeroesModule } from './heroes/heroes.module';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { CrisisCenterModule } from './crisis-center/crisis-center.module';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CrisisCenterModule } from './crisis-center/crisis-center.module';
     FormsModule,
     HeroesModule,
     CrisisCenterModule,
+    AdminModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService,
