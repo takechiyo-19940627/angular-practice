@@ -7,6 +7,7 @@ import { CrisisCenterHomeComponent } from './crisis-center-home/crisis-center-ho
 import { CrisisDetailComponent } from './crisis-detail/crisis-detail.component';
 import { FormsModule } from '@angular/forms';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
+import { CanDeactivateGuard } from '../can-deactivate.guard';
 
 
 @NgModule({
