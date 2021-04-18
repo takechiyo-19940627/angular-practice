@@ -3,7 +3,7 @@
   <div><span>id:</span>{{ crisis.id }}</div>
   <div>
     <label for="crisis-name">crisis name:</label>
-    <input id="crisis-name" [(ngModel)]="crisis.name" placeholder="name">
+    <input id="crisis-name" [(ngModel)]="crisis.name" (ngModelChange)="setEditedName($event)" placeholder="name">
   </div>
   <button (click)="goBack()">go back</button>
 </div>
