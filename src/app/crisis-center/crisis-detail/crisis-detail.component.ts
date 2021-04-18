@@ -1,6 +1,8 @@
 import { Location } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { DialogService } from 'src/app/dialog.service';
 import { Crisis } from 'src/app/shared/models/crisis';
 import { CrisisCenterService } from 'src/app/shared/services/crisis-center.service';
 
@@ -18,6 +20,7 @@ export class CrisisDetailComponent implements OnInit {
     private crisisCenterService: CrisisCenterService,
     private location: Location,
     private router: Router,
+    public dialogService: DialogService,
   ) {}
 
   ngOnInit(): void {
@@ -44,6 +47,14 @@ export class CrisisDetailComponent implements OnInit {
 
   cancel(): void {
     this.gotoCrises();
+  }
+
+  canDeactivate(): Observable<boolean> | boolean {
+    if (!this.crisis || this.crisis.name === this.editedName) {
+      return true;
+    }
+
+    return this.dialogService.confirm('Discord changes?');
   }
 
   private gotoCrises(): void {
