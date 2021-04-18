@@ -14,6 +14,8 @@ import { HeroesModule } from './heroes/heroes.module';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 import { AdminModule } from './admin/admin.module';
+import { LoginComponent } from './auth/login/login.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { AdminModule } from './admin/admin.module';
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { AdminModule } from './admin/admin.module';
     HeroesModule,
     CrisisCenterModule,
     AdminModule,
+    AuthModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService,
