@@ -25,6 +25,10 @@ export class CrisisDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCrisis();
+    this.route.data.subscribe((data: { crisis: Crisis }) => {
+      this.editedName = data.crisis.name;
+      this.crisis = data.crisis;
+    });
   }
 
   getCrisis(): void {
