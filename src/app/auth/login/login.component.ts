@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -14,8 +14,7 @@ export class LoginComponent implements OnInit {
     this.setMessage();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   setMessage(): void {
     this.message = 'Logged' + (this.authService.isLoggedIn ? 'in' : 'out');
