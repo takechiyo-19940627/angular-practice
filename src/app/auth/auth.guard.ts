@@ -1,3 +1,4 @@
+import { CanLoad, Route } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router, NavigationExtras } from '@angular/router';
 import { AuthService } from './auth.service';
@@ -7,6 +8,13 @@ import { AuthService } from './auth.service';
 })
 export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
+
+  canLoad(route: Route): boolean {
+    const url = `/${route.path}`;
+
+    // NOTE: 便宜上trueを返している
+    return true;
+  }
 
   canActivate(
     next: ActivatedRouteSnapshot,
